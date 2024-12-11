@@ -16,12 +16,3 @@ export class Negociacao {
     return this.quantidade * this.valor;
   }
 }
-
-
-export class Fatura {
-  constructor(
-    private readonly criadaEm: Date,
-    private quantidade: number,
-    private valor: number
-  ) { }
-}
