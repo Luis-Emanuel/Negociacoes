@@ -1,5 +1,4 @@
 export class Negociacao {
-  private saldo: number = 100;
   constructor(
     private _data: Date,
     public readonly quantidade: number,
@@ -14,5 +13,13 @@ export class Negociacao {
 
   get volume(): number {
     return this.quantidade * this.valor;
+  }
+
+  public static criaDe(dataString: string, quantidadeString: string, valorString: string): Negociacao {
+    const exp = /-/g;
+    const date = new Date(dataString.replace(exp, ','));
+    const quantidade = parseInt(quantidadeString);
+    const valor = parseFloat(valorString);
+    return new Negociacao(date, quantidade, valor);
   }
 }
