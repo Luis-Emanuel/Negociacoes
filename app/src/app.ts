@@ -19,4 +19,4 @@ if (!botaoImporta) {
   botaoImporta.addEventListener('click', () => {
     controller.importaDados()
   })
-}
+} 
