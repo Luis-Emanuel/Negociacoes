@@ -9,6 +9,9 @@ export class Negociacoes {
         return this.negociacoes;
     }
     paraTexto() {
-        console.log(JSON.stringify(this.negociacoes, null, 2));
+        return JSON.stringify(this.negociacoes, null, 2);
+    }
+    ehIgual(objeto) {
+        return JSON.stringify(this.negociacoes) === JSON.stringify(objeto.lista());
     }
 }
